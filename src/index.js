@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   const task =document.getElementById('tasks') //adding an EventListener to the submit button that fires on click
-  const option = document.getElementById('select')
+  const select = document.getElementById('colorCode')
+  
 
   form.addEventListener('submit', (event)=> { //start an event listiner 
     event.preventDefault() //prevents page refresh
@@ -20,15 +21,31 @@ document.addEventListener("DOMContentLoaded", () => {
     newLi.textContent = taskTxt 
     newbtn.textContent = 'Delete Task';
     newbtn.addEventListener('click', handleDelete)
+  //  select.addEventListener('click',(event)=>{
+
+        if (select.value =='HighestPriority'){
+          newLi.classList.add('HighestPriority')
+        }
+        else if(select.value ==='mediumPriority'){
+          newLi.classList.add('mediumPriority')
+        }
+        else if (select.value ==='lowPriority'){
+          newLi.classList.add('lowPriority')        }
+
+
+   // })
 
     list.appendChild(newLi).appendChild(newbtn)
     //console.log(newLi);
     
   })  
+
   
   function handleDelete(event){
     event.target.parentNode.remove()
   }
+
+  
 
 
 

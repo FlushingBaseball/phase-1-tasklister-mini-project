@@ -36,6 +36,16 @@ button {
   box-shadow: 2px 5px 5px #333;
 }
 
-style{
-  background-color: darkred;
+.HighestPriority{
+  color: red;
+
 }
+
+.mediumPriority{
+  color: rgb(208, 140, 5);
+}
+
+.lowPriority{
+color: green;
+}
+
